@@ -1,0 +1,4 @@
+http://example.com:8080/path/to/resource.html?query1=value1&query2=value2#section
+https://www.google.com/search?q=chatgpt
+ftp://ftp.example.org/resource
+https://github.com/
