@@ -1,4 +1,4 @@
-package org.example.Tasks.Task4;
+package org.labs.Tasks.Task4;
 
 public class Cylinder extends Shape {
     private final double radius;

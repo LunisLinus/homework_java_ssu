@@ -1,4 +1,4 @@
-package org.example.Tasks.Task2;
+package org.labs.Tasks.Task2;
 
 import java.net.URL;
 import java.net.MalformedURLException;
