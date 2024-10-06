@@ -37,8 +37,6 @@ public class DictionaryStatistic {
             }
             if (length < minWordLength) {
                 minWordLength = length;
-                System.out.println(minWordLength);
-                System.out.println(word);
             }
 
             for (char c : lowerWord.toCharArray()) {
