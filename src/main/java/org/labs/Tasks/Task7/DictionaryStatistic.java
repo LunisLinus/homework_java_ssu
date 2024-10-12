@@ -1,7 +1,5 @@
 package org.labs.Tasks.Task7;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Random;
 
 public class DictionaryStatistic {
