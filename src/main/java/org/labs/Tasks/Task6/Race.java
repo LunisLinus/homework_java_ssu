@@ -1,11 +1,11 @@
 package org.labs.Tasks.Task6;
 
 public class Race {
-    private String raceName;
-    private int attackBonus;
-    private int defenseBonus;
-    private int healingBonus;
-    private int spellBonus;
+    private final String raceName;
+    private final int attackBonus;
+    private final int defenseBonus;
+    private final int healingBonus;
+    private final int spellBonus;
 
     public Race(String raceName, int attackBonus, int defenseBonus, int healingBonus, int spellBonus) {
         this.raceName = raceName;
