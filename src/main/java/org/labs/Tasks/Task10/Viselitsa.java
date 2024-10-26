@@ -53,6 +53,11 @@ public class Viselitsa {
                 continue;
             }
 
+            if (input.length() > 1){
+                System.out.println("Вы ввели не одну букву. Пожалуйста, введите только одну букву.");
+                continue;
+            }
+
             char guess = input.charAt(0);
 
             if (!Character.isLetter(guess)) {
