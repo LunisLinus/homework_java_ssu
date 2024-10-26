@@ -20,7 +20,8 @@ public class Viselitsa {
         System.out.println("Добро пожаловать в игру 'Виселица'!");
 
         while (playAgain) {
-            playGame(scanner);
+            String word = chooseGameMode(scanner);
+            playGame(scanner, word);
             playAgain = askToPlayAgain(scanner);
         }
 
@@ -28,8 +29,42 @@ public class Viselitsa {
         scanner.close();
     }
 
-    private static void playGame(Scanner scanner) {
-        String word = getRandomWord().toLowerCase();
+    private static String chooseGameMode(Scanner scanner) {
+        while (true) {
+            System.out.println("\nВыберите режим игры:");
+            System.out.println("1. Одиночный (компьютер загадывает слово)");
+            System.out.println("2. Двухигровой (один игрок загадывает слово)");
+            System.out.print("Введите 1 или 2: ");
+            String choice = scanner.nextLine().trim();
+
+            if (choice.equals("1")) {
+                return getRandomWord().toLowerCase();
+            } else if (choice.equals("2")) {
+                return getWordFromPlayer(scanner);
+            } else {
+                System.out.println("Неверный выбор. Пожалуйста, введите 1 или 2.");
+            }
+        }
+    }
+
+    private static String getWordFromPlayer(Scanner scanner) {
+        System.out.print("Игрок 1, введите слово для угадывания: ");
+        String word = scanner.nextLine().trim().toLowerCase();
+
+        while (word.isEmpty() || !word.matches("[а-яё]+")) {
+            System.out.println("Неверный ввод. Пожалуйста, введите слово только из букв русского алфавита.");
+            System.out.print("Попробуйте снова: ");
+            word = scanner.nextLine().trim().toLowerCase();
+        }
+
+        for (int i = 0; i < 50; i++) {
+            System.out.println();
+        }
+
+        return word;
+    }
+
+    private static void playGame(Scanner scanner, String word) {
         int wordLength = word.length();
 
         List<Character> currentState = new ArrayList<>();
@@ -100,7 +135,6 @@ public class Viselitsa {
         Random random = new Random();
         return DICTIONARY.get(random.nextInt(DICTIONARY.size()));
     }
-
     private static String displayCurrentState(List<Character> currentState) {
         StringBuilder display = new StringBuilder();
         for (char c : currentState) {
