@@ -1,7 +1,5 @@
 package org.labs.Tasks.Task21;
 
-// Main.java
-
 import java.util.Arrays;
 import java.util.List;
 
