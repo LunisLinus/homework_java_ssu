@@ -1,7 +1,5 @@
 package org.labs.Tasks.Task22;
 
-// Dictionary.java
-
 import java.util.HashMap;
 import java.util.Map;
 
