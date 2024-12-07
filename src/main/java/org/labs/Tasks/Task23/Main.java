@@ -1,7 +1,5 @@
 package org.labs.Tasks.Task23;
 
-// Main.java
-
 public class Main {
     public static void main(String[] args) {
         Integer number = 123;
