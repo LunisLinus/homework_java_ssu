@@ -20,8 +20,8 @@ public class Dictionary<K, V> {
         return map.get(key);
     }
 
-    public V remove(K key) {
-        return map.remove(key);
+    public void remove(K key) {
+        map.remove(key);
     }
 
     public boolean containsKey(K key) {
