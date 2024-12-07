@@ -1,8 +1,5 @@
 package org.labs.Tasks.Task19;
 
-// Utils.java
-
-import java.util.Arrays;
 import java.util.List;
 
 public class Utils {
@@ -14,7 +11,7 @@ public class Utils {
         T max = array[0];
         for (T element : array) {
             if (element == null) {
-                continue; // Игнорируем null
+                continue;
             }
             if (max == null || element.compareTo(max) > 0) {
                 max = element;
@@ -36,7 +33,7 @@ public class Utils {
         T max = null;
         for (T element : list) {
             if (element == null) {
-                continue; // Игнорируем null
+                continue;
             }
             if (max == null || element.compareTo(max) > 0) {
                 max = element;
