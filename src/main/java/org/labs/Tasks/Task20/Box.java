@@ -17,7 +17,7 @@ public class Box<T extends Number> {
     public double sum() {
         double total = 0.0;
         for (T element : elements) {
-            if (element != null) { // Проверка на null
+            if (element != null) {
                 total += element.doubleValue();
             }
         }
