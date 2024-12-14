@@ -31,7 +31,6 @@ public class DatabaseConnection {
     public static Connection getConnection() throws SQLException {
         if (connection == null || connection.isClosed()) {
             try {
-                // Регистрация драйвера (опционально для современных JDBC)
                 Class.forName("org.postgresql.Driver");
             } catch (ClassNotFoundException e) {
                 throw new SQLException("PostgreSQL JDBC Driver не найден.", e);
