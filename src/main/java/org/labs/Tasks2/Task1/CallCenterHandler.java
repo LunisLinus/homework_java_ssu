@@ -1,6 +1,11 @@
 package org.labs.Tasks2.Task1;
 
 class CallCenterHandler extends ComplaintHandler {
+
+    public CallCenterHandler() {
+        setNextHandler(new ManagerHandler());
+    }
+
     @Override
     protected boolean canHandle(Complaint complaint) {
         return complaint.getDifficulty() <= 3;
