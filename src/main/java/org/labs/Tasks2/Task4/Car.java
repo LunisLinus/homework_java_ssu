@@ -12,10 +12,13 @@ public class Car extends Thread {
     @Override
     public void run() {
         try {
+            gasStation.arrive(carName);
+
             gasStation.refuel(carName);
+
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            System.out.println("Машина " + carName + " прервана во время заправки.");
+            System.out.println("Машина " + carName + " прервана во время ожидания или заправки.");
         }
     }
 }
